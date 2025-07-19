@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/profile.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+  <title>Career Counselor Profile</title>
+</head>
+<body>
+  <section class="profile-section">
+    <div class="container">
+      <h2>Counselor Profile</h2>
+      <p>Help students by showcasing your qualifications and experience.</p>
+
+      <form id="counselorProfileForm" class="profile-form">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="e.g., Dr. Meera Sharma" required />
+        </div>
+
+        <div class="form-group">
+          <label for="qualification">Highest Qualification</label>
+          <input type="text" id="qualification" placeholder="e.g., M.A. in Psychology, PhD in Career Counseling" required />
+        </div>
+
+        <div class="form-group">
+          <label for="specialization">Area of Specialization</label>
+          <input type="text" id="specialization" placeholder="e.g., IT Careers, Overseas Education, Engineering" />
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Years of Experience</label>
+          <input type="number" id="experience" placeholder="e.g., 5" min="0" />
+        </div>
+
+        <div class="form-group">
+          <label for="certifications">Certifications</label>
+          <textarea id="certifications" placeholder="e.g., Certified Career Analyst (CCA), GCDF, etc."></textarea>
+        </div>
+
+      <div class="form-group">
+        <label for="availableSlots">Available Slots</label>
+        <input type="text" id="availableSlots" placeholder="e.g., 2025-07-18 10:00, 2025-07-18 12:00" />
+        <small>Separate multiple slots with commas</small>
+      </div>
+
+
+        <button type="submit" class="btn-save">Save Profile</button>
+      </form>
+    </div>
+  </section>
+  <!-- Loader -->
+  <div class="loader" id="loader" style="display: none;">
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <div class="item3"></div>
+  </div>
+
+
+  <script type="module" src="script/firebaseConfig.js"></script>
+  <script type="module" src="script/counselorProfile.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Registration</title>
+  <link rel="stylesheet" href="css/register.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="blob"></div>
+      <div class="bg">
+        <h2 class="title">Register</h2>
+        <form id="registerForm">
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="password" id="password" placeholder="Password" required />
+          <select id="role" required>
+            <option value="">Select Role</option>
+            <option value="user">User</option>
+            <option value="counselor">Career Counselor</option>
+          </select>
+          <button type="submit">Sign Up</button>
+          <div id="messageBox" class="message-box"></div>
+        </form>
+        <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+          
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="loader" id="loader">
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <div class="item3"></div>
+  </div>
+
+  <script type="module" src="script/register.js"></script>
+</body>
+</html>

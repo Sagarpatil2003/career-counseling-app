@@ -1,0 +1,82 @@
+/* === Dark Grid Background from Uiverse.io === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: #fff;
+  --gap: 5em;
+  --line: 1px;
+  --color: rgba(255, 255, 255, 0.05);
+  background-image: 
+    linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+  background-size: var(--gap) var(--gap);
+}
+
+/* === Section Container === */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* === Headings === */
+h1, h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+/* === Buttons === */
+button, .btn {
+  padding: 12px 28px;
+  background-color: #ff6b00;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+button:hover, .btn:hover {
+  background-color: #ff852f;
+}
+
+/* === AOS Animations === */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* === Responsive Text === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+}
+
+/* === Footer === */
+footer {
+  padding: 40px 20px;
+  background: rgba(255,255,255,0.05);
+  color: #ccc;
+  text-align: center;
+  font-size: 14px;
+}

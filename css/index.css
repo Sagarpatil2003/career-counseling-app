@@ -1,0 +1,370 @@
+/* -------------------- Global Reset -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* -------------------- Background Grid from Uiverse -------------------- */
+.container {
+  width: 100%;
+  height: 100%;
+  --color: #E1E1E1;
+  background-color: #e9e8e8;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+}
+
+/* -------------------- General Elements -------------------- */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* -------------------- Buttons -------------------- */
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #eee;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.primary {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background-color: #005fa3;
+}
+
+/* -------------------- Navbar -------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(85, 148, 93, 0.171));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 35px;
+  margin-bottom: 50px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0077cc;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+.menu-toggle{
+  display: none;
+}
+/* menu-toggle  */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+ 
+
+}
+
+/* -------------------- Alternative Hamburger Animation (Uiverse.io by Jason21403019) -------------------- */
+/* 🔹 Hamburger Style */
+
+/* 🔹 Mobile Nav */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 75%;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.2);
+  transition: left 0.3s ease;
+  padding: 1.5rem;
+  z-index: 1002;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+
+/* Nav Open State */
+.mobile-nav.open {
+  left: 0;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 1001;
+}
+.overlay.show {
+  display: block;
+}
+
+/* Nav Content */
+
+.login-btn {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #0077cc;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+/* -------------------- Hero Section -------------------- */
+.hero {
+  text-align: center;
+  padding: 30px 10% 60px;
+  
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* -------------------- Section Base -------------------- */
+section {
+  padding: 60px 10%;
+  background: #fff;
+}
+
+section:nth-child(even) {
+  background: #f4f7fb;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #0077cc;
+}
+
+/* -------------------- About Section -------------------- */
+.about p {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* -------------------- Features Section -------------------- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.feature-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.feature-item i {
+  font-size: 2rem;
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+/* -------------------- Steps Section -------------------- */
+.steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-weight: 500;
+}
+
+/* -------------------- Counselors Section -------------------- */
+.counselor-cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.counselor-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 250px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.counselor-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.rating span {
+  font-size: 1.1rem;
+  color: gold;
+}
+
+.rating small {
+  display: block;
+  color: #666;
+}
+
+/* -------------------- Resources Section -------------------- */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.resource-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* -------------------- Job Board Section -------------------- */
+.jobs-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 500px;
+  margin: auto;
+}
+
+.jobs-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* -------------------- Community Section -------------------- */
+.community-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.post {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.post h4 {
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+/* -------------------- Footer -------------------- */
+footer {
+  background: #1d1d1d;
+  color: #ccc;
+  padding: 40px 10%;
+  text-align: center;
+}
+
+.footer-links {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin: 0 10px;
+}
+
+.socials i {
+  margin: 0 10px;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+/* -------------------- Final Responsive Adjustments -------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}

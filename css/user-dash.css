@@ -1,0 +1,387 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a3d62;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.topbar-user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#logoutBtn {
+  background-color: #f53b57;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #1e272e;
+  color: white;
+  padding-top: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 15px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #2f3640;
+}
+
+.sidebar li:hover {
+  background-color: #485460;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Container for the profile section */
+#profile {
+  padding: 40px 20px;
+  background: #f4f6f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Section title */
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+#profile {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #00bcd4;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.profile-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.profile-left {
+  flex: 1 1 250px;
+  background: #f8f9fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.photo-wrapper {
+  text-align: center;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid #00bcd4;
+}
+
+.upload-photo-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #00bcd4;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.upload-photo-btn:hover {
+  background-color: #0097a7;
+}
+
+.profile-right {
+  flex: 2;
+  padding: 2rem;
+}
+
+.profile-right h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.profile-right p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.profile-right strong {
+  color: #111;
+}
+
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.username {
+  font-weight: 500;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  color: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  padding: 0.5rem 1.2rem;
+  margin: 0.4rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:first-of-type {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.modal-content button:last-of-type {
+  background-color: #ccc;
+}
+.card-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.counselor-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  transition: transform 0.2s ease;
+}
+
+.counselor-card:hover {
+  transform: translateY(-5px);
+}
+
+.counselor-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 16px;
+  object-fit: cover;
+}
+
+.counselor-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.counselor-info p {
+  margin: 4px 0 10px;
+  color: #666;
+}
+
+.book-btn {
+  padding: 8px 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom:0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.modal-content input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#confirmBooking {
+  background-color: #28a745;
+  color: white;
+}
+
+#cancelBooking {
+  background-color: #dc3545;
+  color: white;
+}

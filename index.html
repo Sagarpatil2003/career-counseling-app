@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerCounselingPlatform</title>
+
+  <link rel="stylesheet" href="css/index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+
+ <!-- From Uiverse.io by kennyotsu-monochromia --> 
+<div class="container">
+     <!-- Hero Section -->
+  <header class="hero" data-aos="fade-up">
+      <!-- Hamburger toggle -->
+  <div id="menu-toggle" class="menu-toggle" onclick="toggleMenu()">
+    <span>Menu</span>
+  </div>
+    <nav class="navbar">
+  <div class="logo"><a href="#">CareerCounseling</a></div>
+
+
+  <ul class="nav-links" id="desktopNav">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#counselors">Counselors</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#forum">Community</a></li>
+   <li><a href="login.html" class="login-btn">Login</a></li>
+  </ul>
+  </nav>
+
+ 
+    <div class="hero-content">
+      <h1 data-aos="fade-right">Empower Your Career with Expert Guidance</h1>
+      <p data-aos="fade-left">Connect with top career counselors, explore resources, and plan your future with confidence.</p>
+      <a href="register.html" class="btn primary" data-aos="zoom-in">Start Now</a>
+    </div>
+  <!-- Overlay Background -->
+    <div class="overlay" onclick="toggleMenu()"></div>
+    <!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobileNav">
+  <div class="nav-header">
+    <span>Menu</span>
+    <button onclick="toggleMenu()">✕</button>
+  </div>
+  <ul>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#counselors">Counselors</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#forum">Community</a></li>
+    <li><a href="login.html" class="login-btn">Login</a></li>
+  </ul>
+</nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about" data-aos="fade-up">
+    <h2>What is CareerCounselingPlatform?</h2>
+    <p>We help students, professionals, and career changers navigate the modern job market with one-on-one guidance, curated tools, and expert advice.</p>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <h2 data-aos="fade-up">Key Features</h2>
+    <div class="features-grid">
+      <div class="feature-item" data-aos="zoom-in"><i class="fas fa-user-tie"></i><h3>Personalized Counseling</h3></div>
+      <div class="feature-item" data-aos="zoom-in"><i class="fas fa-id-badge"></i><h3>Profile Management</h3></div>
+      <div class="feature-item" data-aos="zoom-in"><i class="fas fa-calendar-check"></i><h3>Session Booking</h3></div>
+      <div class="feature-item" data-aos="zoom-in"><i class="fas fa-book-open"></i><h3>Resource Library</h3></div>
+      <div class="feature-item" data-aos="zoom-in"><i class="fas fa-briefcase"></i><h3>Job Board</h3></div>
+      <div class="feature-item" data-aos="zoom-in"><i class="fas fa-comments"></i><h3>Community Forum</h3></div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" data-aos="fade-up">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step"><strong>1.</strong> Sign up as User or Counselor</div>
+      <div class="step"><strong>2.</strong> Build Your Profile</div>
+      <div class="step"><strong>3.</strong> Book Sessions or Explore Resources</div>
+    </div>
+  </section>
+
+  <!-- Counselor Spotlight -->
+  <section id="counselors" class="counselors">
+    <h2 data-aos="fade-up">Top Rated Counselors</h2>
+    <div class="counselor-cards">
+      <div class="counselor-card" data-aos="fade-right">
+        <img src="assets/images/counselor1.jpg" alt="Counselor">
+        <h3>Dr. Meera Sharma</h3>
+        <p>Career Strategist | 10+ years</p>
+        <div class="rating">
+          <span>⭐️⭐️⭐️⭐️⭐️</span>
+          <small>(120 reviews)</small>
+        </div>
+      </div>
+      <div class="counselor-card" data-aos="fade-left">
+        <img src="assets/images/counselor2.jpg" alt="Counselor">
+        <h3>Rajesh Patel</h3>
+        <p>Resume & Interview Coach</p>
+        <div class="rating">
+          <span>⭐️⭐️⭐️⭐️☆</span>
+          <small>(88 reviews)</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Preview -->
+  <section id="resources" class="resources">
+    <h2 data-aos="fade-up">Explore Free Resources</h2>
+    <div class="resource-grid">
+      <div class="resource-item" data-aos="zoom-in"><h4>Resume Template</h4></div>
+      <div class="resource-item" data-aos="zoom-in"><h4>Interview Guide PDF</h4></div>
+      <div class="resource-item" data-aos="zoom-in"><h4>LinkedIn Tips Video</h4></div>
+    </div>
+  </section>
+
+  <!-- Job Board Preview -->
+  <section class="job-board" data-aos="fade-up">
+    <h2>Latest Job Openings</h2>
+    <ul class="jobs-list">
+      <li>Frontend Developer - Remote</li>
+      <li>Marketing Analyst - Mumbai</li>
+      <li>UI/UX Designer - Bengaluru</li>
+    </ul>
+    <a href="jobs.html" class="btn">View All Jobs</a>
+  </section>
+
+  <!-- Community Preview -->
+  <section id="forum" class="community" data-aos="fade-up">
+    <h2>From Our Community</h2>
+    <div class="community-posts">
+      <div class="post" data-aos="fade-right">
+        <h4>How to switch careers after 30?</h4>
+        <p>Posted by Anjali R.</p>
+      </div>
+      <div class="post" data-aos="fade-left">
+        <h4>Best certifications for Data Analyst?</h4>
+        <p>Posted by Karan M.</p>
+      </div>
+    </div>
+    <a href="forum.html" class="btn">Explore Forum</a>
+  </section>
+
+  <!-- Footer -->
+  <footer data-aos="fade-up">
+    <div class="footer-content">
+      <p>&copy; 2025 CareerCounselingPlatform</p>
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="socials">
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+    </div>
+  </footer>
+ </div>
+
+  <!-- AOS Script -->
+    <!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+ function toggleMenu() {
+  const nav = document.getElementById('mobileNav')
+  const overlay = document.querySelector('.overlay')
+  nav.classList.toggle('open')
+  overlay.classList.toggle('show')
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>

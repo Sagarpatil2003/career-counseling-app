@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Dashboard - Career Platform</title>
+  <link rel="stylesheet" href="css/user-dash.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>CareerCounselingPlatform</h1>
+   <div class="topbar-user" id="userMenu">
+ 
+  <span class="username">Hi, Sagar</span> <span id="role">()</span>
+  <div class="dropdown">
+    <span class="arrow">&#9662;</span>
+    <ul class="dropdown-menu" id="dropdownMenu">
+      <li><a href="#profile" onclick="showSection('profile')">View Profile</a></li>
+      <li><button id="logoutBtn">Logout</button></li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <ul>
+       
+        <li onclick="showSection('book')">📅 Book Counselor</li>
+        <li onclick="showSection('sessions')">📝 My Sessions</li>
+        <li onclick="showSection('resources')">📚 Resources</li>
+        <li onclick="showSection('jobs')">💼 Job Board</li>
+        <li onclick="showSection('forum')">💬 Community Forum</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+     <section id="profile" class="section active">
+  <h2 class="section-title">My Profile</h2>
+
+  <div class="profile-card">
+  
+    <div class="profile-right">
+      <h3 id="name">Loading...</h3>
+      <p><strong>Email:</strong> </p>
+      <p><strong>Role:</strong> </p>
+      <p><strong>Education:</strong> </p>
+      <p><strong>Skills:</strong> </p>
+
+    </div>
+  </div>
+     </section>
+
+      <section id="book" class="section">
+       <div id="book-session-section">
+        <h2>Book a Counselor</h2>
+        <div id="counselor-list"></div>
+      </div>
+
+      <template id="counselor-template">
+        <div class="counselor-card">
+          <h3 class="counselor-name"></h3>
+          <p class="counselor-expertise"></p>
+          <button class="book-btn">Book Session</button>
+        </div>
+      </template>
+
+        
+      </section>
+
+      <section id="sessions" class="section">
+        <h2>My Sessions</h2>
+       
+        <template id="counselor-template">
+          <div class="counselor-card">
+            <img class="counselor-img" src="" alt="Counselor Image">
+            <h3 class="counselor-name"></h3>
+            <p class="counselor-expertise"></p>
+            <button class="book-btn">Book Session</button>
+          </div>
+        </template>
+
+        <div id="counselor-list"></div>
+
+      </section>
+  <div id="bookingModal" class="hidden">
+            <h3>Book a session with <span id="modal-counselor-name"></span></h3>
+            <label>Date: <input type="date" id="sessionDate"></label>
+            <label>Time: <input type="time" id="sessionTime"></label>
+            <button id="confirmBooking">Confirm</button>
+            <button id="cancelBooking">Cancel</button>
+        </div>
+-
+      <section id="resources" class="section">
+        <h2>Resource Library</h2>
+        <p>Explore helpful articles, guides, and templates.</p>
+      </section>
+
+      <section id="jobs" class="section">
+        <h2>Job Board</h2>
+        <p>Find relevant job opportunities curated for you.</p>
+      </section>
+
+      <section id="forum" class="section">
+        <h2>Community Forum</h2>
+        <p>Connect, ask questions, and share your journey.</p>
+      </section>
+    </main>
+  </div>
+
+<script type="module" src="script/logOut.js"></script>
+<script type="module" src="script/dashboard-user.js"></script>
+
+<script>
+    function showSection(id) {
+       document.querySelectorAll(".section").forEach(sec=> sec.classList.remove("active") )
+       document.getElementById(id).classList.add('active')
+    }
+    
+     const userMenu = document.getElementById('userMenu')
+     const dropdown = document.getElementById('dropdownMenu')
+
+        userMenu.addEventListener('click', () => {
+            dropdown.classList.toggle('active')
+        })
+
+
+    document.addEventListener('click', function (e) {
+        if (!userMenu.contains(e.target)) {
+        dropdown.classList.remove('active')
+        }
+    })
+
+
+</script>
+</body>
+</html>
